@@ -1,4 +1,4 @@
-# PyScrape
+# PyPass
 
 A CLI based password manager, buit using the `pycryptodome` library using RSA for key generation and encryption, it also uses rich and inquirer library for user friendly command line interface. 
 
