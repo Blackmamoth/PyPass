@@ -47,6 +47,22 @@ A CLI based password manager, buit using the `pycryptodome` library using RSA fo
    ```
 3. You can also save these in your system's environment variable directly.
 
+## Structure
+
+1. Following should be the structure of the file, when importing passwords:
+
+    ```json
+        [
+              {
+                  "application": "name_of_the_application",
+                  "password": "unencrypted_password"
+              }
+        ]
+    ```
+
+2. Keep a note that, password in this json file should not be encrypted. The password will be automatically encrypted.
+
+
 	
 
 
