@@ -47,7 +47,7 @@ A CLI based password manager, buit using the `pycryptodome` library using RSA fo
    ```
 3. You can also save these in your system's environment variable directly. 
 
-4. To generate and save your public and private keys run the `generate_keys.py` file inside `prerun` directory, and use that file path in the above env variables above.
+4. To generate and save your public and private keys run the `generate_keys.py` file inside `prerun` directory, and use that file path in the env variables above.
 
 5. Also, to generate the hash for your root password run the `hash_root_password.py` file inside `prerun` directory, and use them in the env variable above.
 
@@ -64,7 +64,7 @@ A CLI based password manager, buit using the `pycryptodome` library using RSA fo
         ]
     ```
 
-2. Keep a note that, password in this json file should not be encrypted. The password will be automatically encrypted.
+2. Keep a note that, password in this json file should not be encrypted. The password will be automatically encrypted, while the importing process
 
 
 	
