@@ -45,7 +45,11 @@ A CLI based password manager, buit using the `pycryptodome` library using RSA fo
      PRIVATE_KEY_PATH=path_to__your_private_key_file
      ROOT_PASSWORD=sha512_hash_of_your_root_password
    ```
-3. You can also save these in your system's environment variable directly.
+3. You can also save these in your system's environment variable directly. 
+
+4. To generate and save your public and private keys run the `generate_keys.py` file inside `prerun` directory, and use that file path in the above env variables above.
+
+5. Also, to generate the hash for your root password run the `hash_root_password.py` file inside `prerun` directory, and use them in the env variable above.
 
 ## Structure
 
