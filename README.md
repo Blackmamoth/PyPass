@@ -44,7 +44,8 @@ A CLI based password manager, buit using the `pycryptodome` library using RSA fo
      PUBLIC_KEY_PATH=path_to_your_public_key_file
      PRIVATE_KEY_PATH=path_to__your_private_key_file
      ROOT_PASSWORD=sha512_hash_of_your_root_password
-	 ```
+   ```
+3. You can also save these in your system's environment variable directly.
 
 	
 
