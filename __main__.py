@@ -15,6 +15,10 @@ def main() -> None:
             case 3:
                 menu.delete_password()
             case 4:
+                menu.import_passwords()
+            case 5:
+                menu.export_passwords()
+            case 6:
                 break
 
 

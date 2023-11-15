@@ -8,7 +8,7 @@ class Password(Base):
     __tablename__ = "passwords"
 
     id: Mapped[str] = mapped_column(
-        primary_key=True, unique=True, default=generate_uuid(), nullable=False
+        primary_key=True, unique=True, default=generate_uuid, nullable=False
     )
     application: Mapped[str] = mapped_column(nullable=False)
     password: Mapped[str] = mapped_column(Text, nullable=False)

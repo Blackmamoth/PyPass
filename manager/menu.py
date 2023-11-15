@@ -1,4 +1,4 @@
-from inquirer import List, prompt
+from inquirer import List, Path, prompt
 from manager.manager import PasswordManager
 from rich.table import Table
 from rich.console import Console
@@ -11,7 +11,9 @@ _choices = [
     "2. Show all passwords.",
     "3. Update a password.",
     "4. Delete a password.",
-    "5. Exit.",
+    "5. Import passwords.",
+    "6. Export passwords.",
+    "7. Exit.",
 ]
 
 
@@ -76,5 +78,31 @@ class PasswordManagerMenu:
         if self.verify_root_password():
             application = input("Enter the name of the application: ")
             PasswordManager.delete_password(application=application)
+        else:
+            ConsoleLogger.error("Invalid root password, try again.")
+
+    def import_passwords(self):
+        json_file = [
+            Path(
+                "json_file",
+                message="Enter the path to your passwords file, which is in json format",
+                path_type=Path.FILE,
+                exists=True,
+            )
+        ]
+        file_path = prompt(json_file).get("json_file")
+        PasswordManager.import_passwords(file_path=file_path)
+
+    def export_passwords(self):
+        if self.verify_root_password():
+            json_file = [
+                Path(
+                    "json_file",
+                    message="Please enter the path to which you want to save your passwords, use the extension '.json'.",
+                    path_type=Path.FILE,
+                )
+            ]
+            file_path = prompt(json_file).get("json_file")
+            PasswordManager.export_passwords(file_path=file_path)
         else:
             ConsoleLogger.error("Invalid root password, try again.")
