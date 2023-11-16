@@ -10,9 +10,9 @@ def generate_keys(dir_path: str):
         public_key = private_key.public_key()
         os.chdir(dir_path)
         with open("public_key.pem", "w") as public_key_file:
-            public_key_file.write(public_key.export_key())
+            public_key_file.write(public_key.export_key().decode())
         with open("private_key.pem", "w") as private_key_file:
-            private_key_file.write(private_key.export_key())
+            private_key_file.write(private_key.export_key().decode())
         print(f"Private and public key successfully save at {dir_path} directory.")
     except Exception:
         print("An error occured while generating and saving keys.")
