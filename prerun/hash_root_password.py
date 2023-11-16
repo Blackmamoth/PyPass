@@ -10,6 +10,6 @@ root_password = maskpass.askpass("Enter your root password: ", mask="#")
 
 print()
 
-print(root_password)
+print(hash_password(root_password))
 
 print()
