@@ -29,7 +29,7 @@ class PasswordManagerMenu:
         options = [
             List(
                 "options",
-                message="Choose an option between 1-5",
+                message="Choose an option between 1-7",
                 choices=_choices,
             ),
         ]
